@@ -38,3 +38,9 @@ app.get('/empleados', (req, res) =>{
         nombre: 'empleados'
     });
 });
+
+app.get('/usuarios', (req, res) =>{  
+    res.render('usuarios', {
+        nombre: 'usuarios'
+    });
+});
