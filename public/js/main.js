@@ -1,14 +1,16 @@
-const linkRoles = () =>{
-    let log =true
+const validarFormularioEmpleado = () => {
+    let nombre = document.querySelector('#nombre')
+    let apellido = document.querySelector('#apellido')
+    let documento = document.querySelector('#documento')
+    let cargo = document.querySelector('#cargo')
+    let estado = document.querySelector('#estado')
 
-    return new Promise((resolve, reject) =>{
-        if (log == true ){
-            resolve(location.
-            reject(alert("Nombre de usuario o contraseña invalidos"))
-        }
-    })
-    
+    if (nombre.value == '' || apellido.value == '' || documento.value == '' || cargo.value == '' || estado.value == '') {
+        alert('Todos los campos son obligatorios')
+    }else{
+        alert('Empleado creado correctamente')
+    }
 }
 
-const btn = document.querySelector('#buttonRoles')
-btn.addEventListener("click", linkRoles)    
+const botonValidacion = document.querySelector("#accion")
+botonValidacion.addEventListener("click", validarFormularioEmpleado)
