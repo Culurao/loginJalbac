@@ -1,14 +1,25 @@
-const linkRoles = () =>{
-    let log =true
+let nombreAnilloIngresado = document.querySelector("#nombreAnillo");
+let tipoAnilloIngresado = document.querySelector("#tipoAnillo");
+let pesoAnilloIngresado = document.querySelector("#pesoAnillo");
+let detalleAnilloIngresado = document.querySelector("#detalleAnillo");
+let infoAnilloIngresado = document.querySelector("#infoAnillo");
 
-    return new Promise((resolve, reject) =>{
-        if (log == true ){
-            resolve(location.
-            reject(alert("Nombre de usuario o contraseña invalidos"))
-        }
-    })
-    
-}
+const registrarDevolucion = () => {
+  return new Promise((resolve, reject) => {
+    let encontrado = false;
+    if (
+      nombreAnilloIngresado.value == "" ||
+      tipoAnilloIngresado.value == "" ||
+      pesoAnilloIngresado.value == "" ||
+      detalleAnilloIngresado.value == "" ||
+      infoAnilloIngresado.value == ""
+    ) {
+      resolve(alert("Informacion ingresada invalida"));
+    } else {
+      reject(alert("Devolucion registrada"));
+    }
+  });
+};
 
-const btn = document.querySelector('#buttonRoles')
-btn.addEventListener("click", linkRoles)    
+const botonValidacion = document.querySelector("#validarDevolucion");
+botonValidacion.addEventListener("click", registrarDevolucion);

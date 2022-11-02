@@ -8,7 +8,7 @@ let infoAnilloIngresado = document.querySelector("#infoAnillo");
 const registrarDevolucion = () => {
     return new Promise((resolve, reject) => {
         let encontrado = false;
-        if (nombreAnilloIngresado == "" && tipoAnilloIngresado == "" && pesoAnilloIngresado == "" && detalleAnilloIngresado == "" && infoAnilloIngresado == "") {
+        if (nombreAnilloIngresado == "" || tipoAnilloIngresado == "" || pesoAnilloIngresado == "" || detalleAnilloIngresado == "" || infoAnilloIngresado == "") {
             reject(alert('Informacion ingresada invalida'))
         } else {
             resolve(alert('Devolucion registrada correctamente'))
