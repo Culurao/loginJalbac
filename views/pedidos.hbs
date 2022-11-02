@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jalbac Dashboard</title>
+  <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  {{>navbar}}
+  {{>sidebar}}
+  <div class="content-body">
+    <div class="col-xl-6 m-auto">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">PEDIDOS</h4>
+        </div>
+        <div class="card-body">
+          <div class="basic-form">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Fecha pedido</label>
+                  <input type="date" id="fechaPedido" class="form-control" placeholder="">
+                </div>
+                <div class="form-group col-md-4">
+                  <label>cliente</label>
+                  <select id="cliente" class="form-control default-select">
+                    <option selected="">...</option>
+                    <option value="josue">Josue</option>
+                    <option value="barreto">Barreto</option>
+                    <option value="portela">Portela</option>
+                  </select>
+                </div>
+              </div>
+                <div class="form-group col-md-6">
+                  <label>fecha entrega</label>
+                  <input type="date" id="fechaEntrega" class="form-control" placeholder="fecha entrega">
+                </div>
+                <div class="form-group col-md-6">
+                  <label>estado</label>
+                  <input type="text" id="estado" class="form-control">
+                </div>
+              </div>
+              
+              <button type="button" id="btnAgregarPedido" class="btn btn-primary">agregar pedido</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="../assets/pedidos.js"></script>
+  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="vendor/global/global.min.js"></script>
+  <script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="vendor/moment/moment.min.js"></script>
+
+  <script src="vendor/fullcalendar/js/main.min.js"></script>
+  <script src="js/plugins-init/fullcalendar-init.js"></script>
+
+  <script src="js/custom.min.js"></script>
+  <script src="js/deznav-init.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/styleSwitcher.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

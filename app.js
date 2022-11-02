@@ -32,6 +32,11 @@ app.get('/roles', (req, res) =>{
         nombre: 'roles'
     });
 });
+app.get('/pedidos', (req, res) =>{  
+    res.render('pedidos', {
+        nombre: 'pedidos'
+    });
+});
 
 app.get('/empleados', (req, res) =>{  
     res.render('empleados', {
