@@ -33,4 +33,8 @@ app.get('/roles', (req, res) =>{
     });
 });
 
-
+app.get('/empleados', (req, res) =>{  
+    res.render('empleados', {
+        nombre: 'empleados'
+    });
+});
