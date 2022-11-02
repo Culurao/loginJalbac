@@ -33,6 +33,12 @@ app.get('/roles', (req, res) =>{
     });
 });
 
+app.get('/devoluciones', (req, res) =>{  
+    res.render('devoluciones', {
+        nombre: 'devoluciones'
+    });
+});
+
 app.get('/empleados', (req, res) =>{  
     res.render('empleados', {
         nombre: 'empleados'
